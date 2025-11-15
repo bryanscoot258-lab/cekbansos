@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Bansos</title>
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar {
+            width: 100%;
+            background: #3f51b5;
+            padding: 16px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        .navbar img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        .navbar-title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 12px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .login-container {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            width: 320px;
+            margin-top: 80px;
+        }
+        .login-container h2 {
+            margin-bottom: 24px;
+            text-align: center;
+            color: #333;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #1565c0;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            color: #fff;
+        }
+        .google { background: #db4437; }
+        .facebook { background: #4267B2; }
+        .instagram { background: #E1306C; }
+        .twitter { background: #1DA1F2; }
+        .social-btn i {
+            margin-right: 8px;
+        }
+    </style>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="navbar" style="text-align: left; padding-left: 32px;">
+        <img src="loginlogo.png" alt="Logo Bansos" style="display: inline-block;">
+        <span class="navbar-title">Bansos</span>
+    </div>
+    <form class="login-container" method="post" action="proses_login.php">
+        <h2>Login Bansos</h2>
+        <input type="text" name="username" placeholder="Username" required autofocus>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Masuk</button>
+        <div style="text-align:center; margin:16px 0 8px 0; color:#888;">atau login dengan</div>
+        <div class="social-login">
+            <a class="social-btn google" href="login_google.php"><i class="fab fa-google"></i> Google</a>
+            <a class="social-btn facebook" href="login_facebook.php"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a class="social-btn instagram" href="login_instagram.php"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="social-btn twitter" href="login_twitter.php"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </form>
+</body>
+</html>
